@@ -1,0 +1,76 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+section>*{
+    margin: 20px auto;
+}
+.contFlex {
+    width:90%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contFlex>* {
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+article>* {
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
+.overlay {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: royalblue;
+    opacity: 0;
+    transition: linear 0.8s;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.overlay:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.modale {
+   
+    position: fixed;
+   top:0;
+   left:0;
+   right: 0;
+   bottom: 0;
+   display: flex;
+   display: none;
+   justify-content: center;
+   align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+.fermer {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 5rem;
+}
+.fermer:hover {
+    cursor: pointer;
+    color: white;
+}
+.modale>img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
